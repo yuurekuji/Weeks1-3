@@ -46,7 +46,7 @@ public class jump : MonoBehaviour
     {
 
         Vector2 pos = transform.position;
-        pos.y = speed* transform.up  * Time.deltaTime * curve.Evaluate(t); 
+     //   pos.y = speed* transform.up  * Time.deltaTime * curve.Evaluate(t); 
   
 
     t += Time.deltaTime;
