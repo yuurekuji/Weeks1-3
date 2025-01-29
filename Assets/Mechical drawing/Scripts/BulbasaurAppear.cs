@@ -8,6 +8,8 @@ public class BulbasaurAppear : MonoBehaviour
     public bool isBallOnGround = false;
     public bool dis = false;
     public bool rotate = false;
+    public bool isMoving = false;
+
     public AnimationCurve curve;
     [Range(0, 1)]
     public float t;
@@ -15,6 +17,10 @@ public class BulbasaurAppear : MonoBehaviour
     public AnimationCurve bigger;
     [Range(0, 1)]
     public float b;
+
+
+
+    public float speed = 0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -78,10 +84,12 @@ public class BulbasaurAppear : MonoBehaviour
         }
 
 
+
+
         //////////////////////////////////////////////////////////////
         ///////// Make bulba shake when appear with lerp  ////////////
         //////////////////////////////////////////////////////////////
-        
+
         Vector3 fun = transform.eulerAngles;
         fun.z = Mathf.Lerp(0, 360, bigger.Evaluate(b)); /// this lerps the z or the rotation of bulba and evaluates based off of my animation curve b
         transform.eulerAngles = fun;
@@ -107,6 +115,9 @@ public class BulbasaurAppear : MonoBehaviour
         transform.localScale = Vector3.one * curve.Evaluate(t);
         // this line of code forces the bulba to retain the order inside the layers, if this line of code is missing the bulba will shift back to a z position of 0 when the game is run. 
         pos.z = 1.5f;
+
+
+
 
         transform.position = pos;
     }

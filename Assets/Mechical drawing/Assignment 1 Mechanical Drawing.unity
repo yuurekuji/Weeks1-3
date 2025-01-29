@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 45703772}
   - component: {fileID: 45703771}
   - component: {fileID: 45703773}
+  - component: {fileID: 45703774}
   m_Layer: 0
   m_Name: bulba
   m_TagString: Untagged
@@ -223,6 +224,7 @@ MonoBehaviour:
   isBallOnGround: 0
   dis: 0
   rotate: 0
+  isMoving: 0
   curve:
     serializedVersion: 2
     m_Curve:
@@ -261,6 +263,42 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
+      time: 0.12159097
+      value: 0.8408244
+      inSlope: 1.3649606
+      outSlope: 1.3649606
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.38759077
+      value: 0.21440983
+      inSlope: 0.34282607
+      outSlope: 0.34282607
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.54742086
+      value: 0.94282514
+      inSlope: 1.8328401
+      outSlope: 1.8328401
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.74192375
+      value: 0.19471276
+      inSlope: 0.11861081
+      outSlope: 0.11861081
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
@@ -273,6 +311,19 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   b: 0
+  speed: 0.1
+--- !u!114 &45703774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45703770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bf61a6f4ef0e14fbcfb480da30e3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1019641454
 GameObject:
   m_ObjectHideFlags: 0
