@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallShake : MonoBehaviour
 {
     public bool isGameOn = false;
     public bool isBallOnGround = false;
+    public bool dis = false;
 
     public AnimationCurve curve;
     [Range(0,1)]
     public float t;
+
+
+    public Transform start;
+    public Vector2 end;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +32,11 @@ public class BallShake : MonoBehaviour
         }
 
         Vector3 pos = transform.position;
+
+        //////////////////////////////////////////////////////////////////////
+        ////////////////   Ball Shaking animation   //////////////////////////
+        //////////////////////////////////////////////////////////////////////
+        
         if(pos.y <= 0.2f)
         {
             isBallOnGround = true; // this sets the boolean to true when the position of the ball is where we want it to be.
@@ -45,10 +57,30 @@ public class BallShake : MonoBehaviour
         if (isGameOn == false)
         {
             isBallOnGround = false;
+            dis = false;
         }
 
         // this line of code forces the ball to retain the order inside the layers, if this line of code is missing the ball will shift back to a z position of 0 when the game is run. 
         pos.z = 1.5f;
+
+        ///////////////////////////////////////////////////////////////////////
+        //////////////////       Ball Dispaer Aninmation       ////////////////
+        ///////////////////////////////////////////////////////////////////////
+
+        if (Input.GetKey(KeyCode.Space) && isBallOnGround == true) // this is to check if the key input is space when the ballisonground boolean is true. When the conditons are met the dis boolean is turned to true.
+        {
+            dis = true;
+        }
+
+        if(dis == true) // when the dis boolean is turned to true, the positon of the ball will swithc to 3 which is behind everything else and off the screen to make the illusions it disapeared. 
+        {
+            pos.z = 3f;
+        }
+        else // else it resets back to the original z value of 1.5f.
+        {
+            pos.z = 1.5f;
+        }
+
         transform.position = pos;
     }
 }

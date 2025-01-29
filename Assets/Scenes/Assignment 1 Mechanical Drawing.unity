@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45703772}
   - component: {fileID: 45703771}
+  - component: {fileID: 45703773}
   m_Layer: 0
   m_Name: bulba
   m_TagString: Untagged
@@ -200,12 +201,78 @@ Transform:
   m_GameObject: {fileID: 45703770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 2, z: 1.5}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45703773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45703770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ce94f6c20a8004cbcaeda44330a4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGameOn: 0
+  isBallOnGround: 0
+  dis: 0
+  rotate: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 0
+  bigger:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  b: 0
 --- !u!1 &1019641454
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,14 +482,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a115c8ca2d968ff4e823899521a5a25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameOn: 0
   isBallOnGround: 0
+  dis: 0
   curve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  t: 0
+  t: 0.501
+  start: {fileID: 1333806365}
+  end: {x: 2.2, y: -1.25}
 --- !u!1 &1547361900
 GameObject:
   m_ObjectHideFlags: 0
