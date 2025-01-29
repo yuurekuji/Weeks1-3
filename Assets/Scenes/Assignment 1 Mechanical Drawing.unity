@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 1333806365}
   - component: {fileID: 1333806364}
   - component: {fileID: 1333806366}
+  - component: {fileID: 1333806367}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -402,6 +403,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameOn: 0
+--- !u!114 &1333806367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333806363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a115c8ca2d968ff4e823899521a5a25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBallOnGround: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 0
 --- !u!1 &1547361900
 GameObject:
   m_ObjectHideFlags: 0

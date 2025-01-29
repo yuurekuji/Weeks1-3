@@ -29,12 +29,15 @@ public class Turnonandoff : MonoBehaviour
         // by using layers with Z value, it can create the illusion of the object dissapearing without using the destroy function. 
         if(isGameOn == true)
         {
+            //this pos is set to 3 to push it to the back of everything which is going on. 
             pos.z = 3;
 
             
         }
-        else
+        // conditional checks if it is false to revert back to the game off screen
+        else 
         {
+            // a pos of 0 pushes it to the front of every other game identity to fake the screen going back off. 
             pos.z = 0;
         }
         transform.position = pos;
